@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Section with Fixed Background */
+.section {
+    width: 100%;
+    min-height: 100vh; /* Full-screen height */
+    padding: 100px 20px;
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixes the background for each section */
+}
+
+/* Dark Overlay Effect for Each Section */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 0;
+}
+
+/* Individual Backgrounds */
+.section-1 {
+    background-image: url('./assets/banner-3.avif'); /* Replace with your image */
+}
+
+.section-2 {
+    background-image: url('./assets/resbanner-1.webp'); /* Replace with your image */
+}
+
+.section-3 {
+    background-image: url('./assets/bann-5.jpg'); /* Replace with your image */
+}
+
+.section-4 {
+    background-image: url('./assets/ban-4.avif'); /* Replace with your image */
+}
+
+/* Content Container */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+/* section contents */
+.section-1 .caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.section-1 .caption h1 {
+    font-size: 3.8rem; /* Adjust for responsiveness */
+    margin-bottom: 20px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;;
+}
+
+.section-1 .caption p {
+    font-size: 1.4rem; /* Adjust for responsiveness */
+    margin-bottom: 30px;
+ 
+}
+
+.section-1 .btn-book-now {
+    padding: 10px 35px;
+    background-color: green;
+    color: white;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.section-1 .btn-book-now:hover {
+    background-color: rgba(0, 100, 0, 0.021);
+}
+
+/* Make sure the caption remains responsive */
+@media (max-width: 768px) {
+    .section-1 .caption h1 {
+        font-size: 3rem;
+    }
+
+    .section-1 .caption p {
+        font-size: 1.2rem;
+    }
+
+    .section-1 .btn-book-now {
+        padding: 8px 20px;
+    }
+}
+/* section contents */
+
+
+
+
+
+
+
+
+/* about */
+/* Grey Background Section */
+/* Grey Background Section */
+.section-grey {
+    background-color: #cacaca; /* Light grey background */
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Make it responsive */
+}
+
+/* Left Content - Green Caption Text */
+.left-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: left;
+}
+
+.left-content h2 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    color: green;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.left-content p {
+    font-size: 1.2rem; /* Slightly larger for readability */
+    margin-bottom: 20px;
+}
+
+/* Right Content - Circular Image */
+.right-content {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.right-content img {
+    width: 350px; /* Adjust size as needed */
+    height: 350px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .section-grey {
+        padding: 40px 15px; /* Reduce padding for smaller screens */
+    }
+
+    .left-content h2 {
+        font-size: 2.6rem; /* Smaller font size for mid-sized devices */
+    }
+
+    .left-content p {
+        font-size: 1rem;
+    }
+
+    .right-content img {
+        width: 300px; /* Reduce image size on smaller devices */
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-grey {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        padding: 30px 10px;
+    }
+
+    .left-content, .right-content {
+        text-align: center;
+    }
+
+    .left-content {
+        margin-bottom: 20px;
+        padding: 0 15px; /* Add horizontal padding for small screens */
+    }
+
+    .left-content h2 {
+        font-size: 2.2rem; /* Reduce heading font size further */
+    }
+
+    .right-content img {
+        width: 250px; /* Further reduce image size */
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-content h2 {
+        font-size: 1.8rem; /* Adjust heading for very small screens */
+    }
+
+    .left-content p {
+        font-size: 0.9rem; /* Adjust description font size */
+    }
+
+    .right-content img {
+        width: 200px; /* Smaller image for very small screens */
+        height: 200px;
+    }
+}
+/* about */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* second section */
+/* Centered Green Caption for Section 2 */
+/* General Section Styles */
+/* General Section Styles */
+.section-2 {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: transparent; /* No background color */
+}
+
+.section-2 .caption {
+    color: #FFF;
+    margin-bottom: 30px;
+}
+
+.section-2 .caption h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffff;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.section-2 .caption p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Swiper Slider Styles */
+.swiper-container {
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    position: relative; /* For hover effect positioning */
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow for hover effects */
+}
+
+/* Adjust card size for responsiveness */
+.swiper-slide img {
+    width: 100%; /* Make the image fill the container */
+    max-width: 300px; /* Limit max size */
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px; /* Rounded edges */
+    border: 3px solid white; /* White border around each image */
+}
+
+/* Hover Effect Styles */
+.swiper-slide .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Transparent grey background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Match the card's border radius */
+    opacity: 0; /* Hidden by default */
+    transform: translateY(100%); /* Positioned outside of view */
+    transition: all 0.3s ease; /* Smooth transition for the hover effect */
+    padding: 10px;
+}
+
+/* Text inside the overlay */
+.swiper-slide .hover-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.swiper-slide .hover-overlay p {
+    font-size: 1rem;
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Show the overlay on hover */
+.swiper-slide:hover .hover-overlay {
+    opacity: 1; /* Make the overlay visible */
+    transform: translateY(0); /* Slide it up */
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+    border: 8px solid #fff;
+    color: green;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-2 .caption h2 {
+        font-size: 2rem;
+    }
+
+    .section-2 .caption p {
+        font-size: 1rem;
+    }
+
+    .swiper-slide img {
+        max-width: 250px; /* Reduce size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-2 .caption h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-2 .caption p {
+        font-size: 0.9rem;
+    }
+
+    .swiper-slide img {
+        height: 400px;
+        max-width: 300px; /* Further reduce for very small screens */
+      
+    }
+}
+
+
+
+/* second section */
+
+
+
+
+
+
+
+
+
+
+/* menu section */
+/* General Section Styles */
+/* General Section Styles */
+/* General Section Styles */
+.menu-section {
+    background-color: #f9f9f9; /* Very light background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-caption {
+    color: black; /* Dark text color */
+    margin-bottom: 30px;
+}
+
+.menu-caption h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: green;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.menu-caption p {
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Menu Categories Styles */
+.menu-items {
+    background-color: #eaeaea; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Make it responsive */
+    margin-top: 30px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.menu-category {
+   
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.menu-category i {
+    font-size: 2rem; /* Adjust size for the icons */
+    margin-bottom: 10px;
+    color: black; /* Black color for icons */
+}
+
+.menu-category p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: black;
+}
+
+/* Active state styles */
+.menu-category.active {
+    background-color: green; /* Light green when active */
+    color: rgb(255, 255, 255); 
+   
+}
+
+
+
+
+/* Menu Item List */
+.menu-list {
+    margin-top: 40px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #ffffff; /* White background for each item */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #eaeaea; /* Light grey on hover */
+    transform: scale(1.02);
+}
+
+.menu-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Circular images */
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.menu-details {
+    flex: 1;
+    text-align: left;
+}
+
+.menu-details h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+}
+
+.menu-details p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.menu-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: green;
+}
+
+.menu-category-list {
+    display: none; /* Hide all categories by default */
+    flex-direction: column; /* Ensure items stack vertically */
+}
+
+.menu-category-list.active {
+    display: flex; /* Show the active category items */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu-items {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .menu-category {
+        width: -webkit-fill-available;
+        margin-bottom: 20px;
+        width: 200px; /* Increase width for better display */
+    }
+
+    .menu-item {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
+
+    .menu-image img {
+        margin-bottom: 10px;
+    }
+
+    .menu-details {
+        text-align: center;
+    }
+}
+
+
+/* menu section */
+
+
+
+
+
+/* team */
+/* General Section Styling */
+.section-3 {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.section-3 .caption {
+    color: #FFF;
+    margin-bottom: 30px;
+}
+
+.section-3 .caption h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffff;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.section-3 .caption p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Swiper Slider Styles */
+.swiper-container {
+    padding: 20px 0;
+}
+
+.team-card {
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff; /* Make sure there's a uniform card background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add some shadow to distinguish the card */
+}
+
+/* Adjust card size for responsiveness */
+.team-card img {
+    width: 100%; /* Make the image fill the container */
+    max-width: 300px; /* Limit max size */
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Rounded edges at the top only */
+    border-bottom: 3px solid #fff; /* White line separating image and description */
+}
+
+/* Team Information Styling */
+.team-info {
+    width: 100%; /* Make the info box match the card width */
+    padding: 15px;
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    text-align: center;
+    background-color: #fff;
+}
+
+.team-info h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0 5px 0;
+}
+
+.team-info p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Swiper Pagination */
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-3 .caption h2 {
+        font-size: 2rem;
+    }
+
+    .section-3 .caption p {
+        font-size: 1rem;
+    }
+
+    .team-card img {
+        max-width: 250px; /* Reduce size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-3 .caption h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-3 .caption p {
+        font-size: 0.9rem;
+    }
+
+    .team-card img {
+        max-width: 200px; /* Further reduce for very small screens */
+    }
+}
+
+/* team */

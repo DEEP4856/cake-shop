@@ -1,0 +1,52 @@
+
+/* Navbar */
+.navbar {
+    z-index: 1000;
+    padding: 10px 20px;
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+/* Transparent by default */
+.navbar-transparent {
+    background-color: transparent !important;
+}
+
+/* Add padding between nav links */
+.nav-link {
+    color: white !important;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+    padding: 0 35px; /* Increase gap between nav links */
+}
+
+.nav-link .active{
+    color: green;
+}
+
+
+/* Hover effect */
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: green;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Scrolled navbar */
+.navbar-scrolled {
+    background-color: #222222c4 !important; /* Dark background when scrolled */
+}
