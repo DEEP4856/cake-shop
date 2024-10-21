@@ -1,5 +1,9 @@
 
 /* Navbar */
+.fa-bars {
+    font-size: 30px; /* Adjust size as needed */
+    color: #ffffff; /* White color for the bars */
+}
 .navbar {
     z-index: 1000;
     padding: 10px 20px;
@@ -17,6 +21,7 @@
     font-weight: bold;
     position: relative;
     transition: color 0.3s;
+    margin-left: 25px;
     padding: 0 35px; /* Increase gap between nav links */
 }
 
@@ -48,5 +53,11 @@
 
 /* Scrolled navbar */
 .navbar-scrolled {
-    background-color: #222222c4 !important; /* Dark background when scrolled */
+    background-color: #222222 !important; /* Dark background when scrolled */
+}
+
+@media (max-width:600px){
+    .nav-link{
+        margin-top: 12px;
+    }
 }
